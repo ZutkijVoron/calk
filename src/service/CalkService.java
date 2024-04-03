@@ -29,6 +29,9 @@ public class CalkService {
 	}
 
 	public BigDecimal divide(BigDecimal number1, BigDecimal number2, MathContext context) {
+		if (number2.compareTo(BigDecimal.ZERO) == 0) {
+			return null;
+		}
 		return number1.divide(number2, context);
 	}
 
